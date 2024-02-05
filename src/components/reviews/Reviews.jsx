@@ -21,7 +21,7 @@ const Reviews = ({ getMovieData, movie, reviews, setReviews }) => {
         const rev = revText.current;
 
         try {
-            const res = await fetch('/api/v1/reviews', {
+            const res = await fetch('https://movies-backend-ctx9.onrender.com/api/v1/reviews', {
                 method: 'POST',
                 headers: {
                     "Content-Type": "application/json"
