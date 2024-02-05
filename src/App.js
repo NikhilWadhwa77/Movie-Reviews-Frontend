@@ -16,7 +16,10 @@ function App() {
     const getMovies = async () => {
         try {
             const res = await fetch('/api/v1/movies', {
-                method: 'GET'
+                method: 'GET',
+                headers:{
+                    'Access-Control-Allow-Origin': '*'
+                }
             })
             const data = await res.json()
             console.log(data)
@@ -30,7 +33,10 @@ function App() {
 
         try {
             const res = await fetch(`/api/v1/movies/${movieId}`, {
-                method: 'GET'
+                method: 'GET',
+                headers:{
+                    'Access-Control-Allow-Origin': '*'
+                }
             })
             const singleMovie = await res.json()
             console.log(singleMovie)
