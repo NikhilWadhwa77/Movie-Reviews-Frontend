@@ -15,7 +15,7 @@ function App() {
 
     const getMovies = async () => {
         try {
-            const res = await fetch('https://movies-backend-ctx9.onrender.com/api/v1/movies', {
+            const res = await fetch('/api/v1/movies', {
                 method: 'GET',
                 headers:{
                     'Access-Control-Allow-Origin': '*'
@@ -32,7 +32,7 @@ function App() {
     const getMovieData = async (movieId) => {
 
         try {
-            const res = await fetch(`https://movies-backend-ctx9.onrender.com/api/v1/movies/${movieId}`, {
+            const res = await fetch(`/api/v1/movies/${movieId}`, {
                 method: 'GET',
                 headers:{
                     'Access-Control-Allow-Origin': '*'
