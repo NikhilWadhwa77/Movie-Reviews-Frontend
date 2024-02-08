@@ -16,7 +16,10 @@ function App() {
     const getMovies = async () => {
         try {
             const res = await fetch('http://movies-backend-2-env.eba-xrvvkztp.ap-south-1.elasticbeanstalk.com/api/v1/movies', {
-                method: 'GET'
+                method: 'GET',
+                headers: {
+                    scheme: "http"
+                }
             })
             const data = await res.json()
             console.log(data)
@@ -30,7 +33,10 @@ function App() {
 
         try {
             const res = await fetch(`http://movies-backend-2-env.eba-xrvvkztp.ap-south-1.elasticbeanstalk.com/api/v1/movies/${movieId}`, {
-                method: 'GET'
+                method: 'GET',
+                headers: {
+                    scheme: "http"
+                }
             })
             const singleMovie = await res.json()
             console.log(singleMovie)
