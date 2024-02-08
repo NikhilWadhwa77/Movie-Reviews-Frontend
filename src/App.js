@@ -15,7 +15,7 @@ function App() {
 
     const getMovies = async () => {
         try {
-            const res = await fetch('https://movies-backend-2-env.eba-xrvvkztp.ap-south-1.elasticbeanstalk.com/api/v1/movies', {
+            const res = await fetch('http://movies-backend-2-env.eba-xrvvkztp.ap-south-1.elasticbeanstalk.com/api/v1/movies', {
                 method: 'GET'
             })
             const data = await res.json()
@@ -29,7 +29,7 @@ function App() {
     const getMovieData = async (movieId) => {
 
         try {
-            const res = await fetch(`https://movies-backend-2-env.eba-xrvvkztp.ap-south-1.elasticbeanstalk.com/api/v1/movies/${movieId}`, {
+            const res = await fetch(`http://movies-backend-2-env.eba-xrvvkztp.ap-south-1.elasticbeanstalk.com/api/v1/movies/${movieId}`, {
                 method: 'GET'
             })
             const singleMovie = await res.json()
